@@ -1,0 +1,16 @@
+Security Group ID:
+sg-af25ddd5
+
+Security Group name:
+jupyterhub
+
+aws ec2 run-instances --image-id ami-6e1a0117 --count 1 --instance-type t2.micro --key-name jaja --security-group-ids sg-af25ddd5 --tag 
+
+i-03ec8fc97f469d70e
+
+aws ec2 terminate-instances --instance-ids i-03ec8fc97f469d70e
+
+aws ec2 create-image --instance-id i-02e9aaf25de022e48 --name "Jupyter Lab" --description "An AMI with Python 3, Jupyter Lab and Scipy environment" --no-reboot
+
+Jupyter Lab AMI:
+ami-6665f01e
